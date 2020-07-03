@@ -1,25 +1,22 @@
 <mat-card class="tweet-card">
-  <mat-card-header>
-    <div mat-card-avatar class="profile-image"></div>
-    <mat-card-title>Sentiment Analysis</mat-card-title>
-    <mat-card-subtitle>@Hansoners</mat-card-subtitle>
-  </mat-card-header>
   <mat-card-content>
-<ngx-tweet tweetId="921670221710032896"></ngx-tweet>
-</mat-card-content>
-<mat-card-actions>
-  <mat-chip-list aria-label="Fish selection">
-    <mat-chip color="primary" selected>Positive</mat-chip>
-    <mat-chip color="warn" selected>Negative</mat-chip>
-  </mat-chip-list>
-</mat-card-actions>
-
-<mat-list>
-  <mat-list-item>Item 1</mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>Item 2</mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>Item 3</mat-list-item>
-</mat-list>
-
+    <div class="embed-container">
+    <ngx-tweet tweetId="921670221710032896"></ngx-tweet>
+  </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="chip-container">
+      <mat-chip-list>
+        <mat-chip matTooltip="Mentioned company" color="primary" selected>Apple</mat-chip>
+        <mat-chip matTooltip="Negative sentiment" color="warn" selected>Bearish</mat-chip>
+        <mat-chip matTooltip="Beginning of day price" color="primary">BOD - $56.55</mat-chip>
+        <mat-chip matTooltip="End of day price" color="primary">EOD - $233.22</mat-chip>
+        <mat-chip matTooltip="Percentage change" color="primary">Change - 5%</mat-chip>
+      </mat-chip-list>
+    </div>
+  </mat-card-actions>
 </mat-card>
+
+<div class="btn-container">
+  <button mat-flat-button color="accent">Load More</button>
+</div>

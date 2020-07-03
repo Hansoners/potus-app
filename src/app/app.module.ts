@@ -12,11 +12,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TweetLayoutComponent
+    TweetLayoutComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import {MatListModule} from '@angular/material/list';
     MatButtonModule,
     MatChipsModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
