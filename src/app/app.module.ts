@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 import { TweetLayoutComponent } from './tweet-layout/tweet-layout.component';
 
 import { NgxTweetModule } from 'ngx-tweet';
@@ -25,6 +26,7 @@ import { UserCardComponent } from './user-card/user-card.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     NgxTweetModule,
     MatCardModule,
     MatButtonModule,

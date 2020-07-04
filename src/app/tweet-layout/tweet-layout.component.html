@@ -1,22 +1,28 @@
-<mat-card class="tweet-card">
-  <mat-card-content>
-    <div class="embed-container">
-    <ngx-tweet tweetId="921670221710032896"></ngx-tweet>
-  </div>
-  </mat-card-content>
-  <mat-card-actions>
-    <div class="chip-container">
-      <mat-chip-list>
-        <mat-chip matTooltip="Mentioned company" color="primary" selected>Apple</mat-chip>
-        <mat-chip matTooltip="Negative sentiment" color="warn" selected>Bearish</mat-chip>
-        <mat-chip matTooltip="Beginning of day price" color="primary">BOD - $56.55</mat-chip>
-        <mat-chip matTooltip="End of day price" color="primary">EOD - $233.22</mat-chip>
-        <mat-chip matTooltip="Percentage change" color="primary">Change - 5%</mat-chip>
-      </mat-chip-list>
-    </div>
-  </mat-card-actions>
-</mat-card>
+<div *ngFor="let tweet of tweets | slice:0:idx">
+  <mat-card class="tweet-card">
+    <mat-card-content>
+      <div class="embed-container">
+        <ngx-tweet tweetId="{{tweet.id}}"></ngx-tweet>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <div class="chip-container">
+        <mat-chip-list>
+          <mat-chip matTooltip="Company" color="company" selected>{{tweet.company}}</mat-chip>
+          <mat-chip matTooltip="Sentiment {{tweet.sentiment | percent:'1.0-1'}}"
+            [color]="tweet.sentiment >= 0.5 ? 'bullish' : 'bearish'" selected>
+            {{tweet.sentiment >= 0.5 ? 'Bullish' : 'Bearish'}}</mat-chip>
+          <mat-chip matTooltip="Beginning of day price" color="darkish" selected>BOD | ${{tweet.bod}}</mat-chip>
+          <mat-chip matTooltip="End of day price" color="dark" selected>EOD | ${{tweet.eod}}</mat-chip>
+          <mat-chip matTooltip="Percentage change" [color]="tweet.difference >= 0 ? 'bullish' : 'bearish'">Change |
+            {{tweet.difference | percent:'1.2-2'}}</mat-chip>
+        </mat-chip-list>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
 
 <div class="btn-container">
-  <button mat-flat-button color="accent">Load More</button>
+  <button mat-flat-button color="next" (click)="loadMore()">Load More</button>
 </div>

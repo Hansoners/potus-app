@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { TweetService } from '../tweet.service';
 
 @Component({
   selector: 'app-tweet-layout',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tweet-layout.component.scss']
 })
 export class TweetLayoutComponent implements OnInit {
-
-  constructor() { }
-
+  tweets;
+  idx = 5;
+  constructor(private service: TweetService) { }
   ngOnInit(): void {
+    this.service.getTweets().subscribe(data => {
+      this.tweets = data.tweets;
+    });
+  }
+  loadMore() {
+    this.idx += 5;
   }
 
 }
