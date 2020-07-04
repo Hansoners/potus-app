@@ -1,14 +1,29 @@
 <div class="main-container">
   <div class="title-block">
     <h1 class="rev-block">
-      <span>Twitter Sentiment Analyzer</span>
+      <a href="https://github.com/Hansoners/potus-app" target="_blank">
+        <span>Twitter Sentiment Analyzer</span></a>
     </h1>
   </div>
-  <div class="item-container">
-    <app-user-card></app-user-card>
+
+  <div *ngIf="loading" class="spin-wrapper">
+    <mat-spinner diameter=75></mat-spinner>
   </div>
-  <div class="item-container">
-    <app-tweet-layout>
-    </app-tweet-layout>
+  <div *ngIf="!loading">
+    <div class="btn-container">
+      <p>Built with Python, Flask, Angular, & Google Cloud Natural Language API</p>
+    </div>
+    <div class="btn-container">
+      <a href="https://github.com/Hansoners/potus-app" target="_blank">
+        <p>View it on Github.</p>
+      </a>
+    </div>
+    <div class="item-container">
+      <app-user-card></app-user-card>
+    </div>
+    <div class="item-container">
+      <app-tweet-layout>
+      </app-tweet-layout>
+    </div>
   </div>
 </div>

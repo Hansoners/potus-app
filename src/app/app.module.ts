@@ -37,7 +37,7 @@ import { TweetCardComponent } from './tweet-card/tweet-card.component';
     MatDividerModule,
     MatListModule,
     MatTooltipModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

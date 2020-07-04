@@ -1,8 +1,6 @@
 <div *ngFor="let tweet of tweets | slice:0:idx">
   <app-tweet-card [tweet]=tweet></app-tweet-card>
 </div>
-
-
 <div class="btn-container">
   <button mat-flat-button color="next" (click)="loadMore()">Load More</button>
 </div>

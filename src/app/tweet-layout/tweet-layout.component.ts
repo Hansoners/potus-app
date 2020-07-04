@@ -16,7 +16,7 @@ export class TweetLayoutComponent implements OnInit {
     });
   }
   loadMore() {
-    this.idx += 3;
+    this.idx += 5;
   }
 
 }
