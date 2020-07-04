@@ -13,14 +13,17 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { UserCardComponent } from './user-card/user-card.component';
+import { TweetCardComponent } from './tweet-card/tweet-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetLayoutComponent,
-    UserCardComponent
+    UserCardComponent,
+    TweetCardComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { UserCardComponent } from './user-card/user-card.component';
     MatChipsModule,
     MatDividerModule,
     MatListModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
