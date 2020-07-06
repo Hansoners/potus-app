@@ -17,13 +17,15 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { UserCardComponent } from './user-card/user-card.component';
 import { TweetCardComponent } from './tweet-card/tweet-card.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetLayoutComponent,
     UserCardComponent,
-    TweetCardComponent
+    TweetCardComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

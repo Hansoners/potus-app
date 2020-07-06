@@ -1,0 +1,52 @@
+h1 {
+    font-family: Roboto;
+    animation: color 0.5s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    color: black;
+    opacity: 0;
+    font-size: 2.5rem;
+    font-weight: normal;
+}
+
+.block-reveal {
+    height: 2.5rem;
+    line-height: 50rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 35rem;
+}
+
+.block {
+    animation: reveal 1s ease-in-out;
+    animation-fill-mode: forwards;
+    background: #7D7ABC;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes color {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}

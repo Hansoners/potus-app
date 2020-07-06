@@ -1,3 +1,4 @@
+
 .item-container {
   margin-bottom: 10px;
   display: flex;
@@ -11,72 +12,16 @@ a:link {
 }
 
 .title-block {
-  margin-bottom: 125px;
+  margin: 50px 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-container {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-h1{
-  font-family: Roboto;
-  font-weight: bold;
-  color: #343434;
-  font-size: 42px;
-  padding: 0.4em 1em;
-  white-space: nowrap;
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-
-.rev-block{
-  position: absolute;
-}
-
-.rev-block span{
-  opacity: 0;
-  animation: appear-text 0.0001s linear forwards;
-  animation-delay: 1.4s;
-}
-
-.rev-block:after{
-  content: '';
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 0%;
-  height: 100%;
-  background: #7D7ABC;
-  animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  animation-delay: 1s;
-}
-
-@keyframes rev-block {
-  0% {
-    left: 0;
-    width: 0%;
-  }
-  50%{
-    left: 0;
-    width: 100%;
-  }
-  100%{
-    left:100%;
-    width: 0%;
-  }
-}
-
-@keyframes appear-text {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
 }
 
 .spin-wrapper {
