@@ -1,6 +1,15 @@
-<div *ngFor="let tweet of tweets | slice:0:idx">
-  <app-tweet-card [tweet]=tweet></app-tweet-card>
-</div>
-<div class="btn-container">
-  <button class="hvr-grow" mat-flat-button color="next" (click)="loadMore()">Load More</button>
+<div class="main-container">
+  <div class="tweet-container">
+    <div class="p-justify-center">
+      <div *ngFor="let tweet of tweets | slice:0:idx">
+        <div class="card-container">
+          <app-tweet-card [tweet]=tweet></app-tweet-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button pButton type="button" (click)="loadMore()" icon="pi pi-plus"
+      class="p-button-text p-button-rounded"></button>
+  </div>
 </div>

@@ -1,31 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { LottieModule } from 'ngx-lottie';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TweetLayoutComponent } from './tweet-layout/tweet-layout.component';
+import player from 'lottie-web/build/player/lottie_svg';
+import { ButtonModule } from 'primeng/button';
+import {TooltipModule} from 'primeng/tooltip';
+import { CardModule } from 'primeng/card';
 
 import { NgxTweetModule } from 'ngx-tweet';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatChipsModule} from '@angular/material/chips';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import { UserCardComponent } from './user-card/user-card.component';
 import { TweetCardComponent } from './tweet-card/tweet-card.component';
-import { TitleComponent } from './title/title.component';
+import { HomeComponent } from './home/home.component';
+import { TweetViewComponent } from './tweet-view/tweet-view.component';
+
+import { CarouselModule } from 'primeng/carousel';
+export function playerFactory() {
+  return player;
+}
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetLayoutComponent,
-    UserCardComponent,
     TweetCardComponent,
-    TitleComponent
+    HomeComponent,
+    TweetViewComponent
   ],
   imports: [
     BrowserModule,
@@ -33,13 +36,11 @@ import { TitleComponent } from './title/title.component';
     BrowserAnimationsModule,
     HttpClientModule,
     NgxTweetModule,
-    MatCardModule,
-    MatButtonModule,
-    MatChipsModule,
-    MatDividerModule,
-    MatListModule,
-    MatTooltipModule,
-    MatProgressSpinnerModule,
+    LottieModule.forRoot({ player: playerFactory, useCache: true }),
+    ButtonModule,
+    CardModule,
+    CarouselModule,
+    TooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

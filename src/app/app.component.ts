@@ -1,23 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
-  title = 'potus-web-app';
-  loading;
 
-  constructor(private titleService: Title) {
-    titleService.setTitle('Sentiment Analysis App');
+  constructor(private primengConfig: PrimeNGConfig) { }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
   }
 
-  ngOnInit(): void {
-    this.loading = true;
-    setTimeout(() => {
-      this.loading = false;
-    }, 2000);
-  }
 }

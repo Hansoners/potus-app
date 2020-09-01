@@ -1,23 +1,16 @@
-.tweet-card {
-  min-width: 50%;
-  margin: 20px;
+.tweet-container {
+  width: 550px;
+  height: fit-content;
+  margin: auto;
 }
 
-.chip-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10px;
+.tag {
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
-.embed-container {
-  margin: 0 auto;
-  width: 500px;
-}
-
-.spin-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 25px;
+button {
+  font-size: 0.5em;
+  margin-top: 15px;
+  margin-right: 5px;
 }
