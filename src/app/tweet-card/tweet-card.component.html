@@ -1,26 +1,7 @@
-<!-- <div *ngIf="loading" class="spin-wrapper">
-  <mat-spinner diameter=75></mat-spinner>
+<div class="tweet-container">
+  <p-card>
+    <ngx-tweet tweetId="{{tweet.id}}">
+      <h1>Loading...</h1>
+    </ngx-tweet>
+  </p-card>
 </div>
-<div *ngIf="!loading">
-  <mat-card class="tweet-card">
-    <mat-card-content>
-      <div class="embed-container">
-        <ngx-tweet tweetId="{{tweet.id}}"><h1>Loading...</h1></ngx-tweet>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <div class="chip-container">
-        <mat-chip-list>
-          <mat-chip matTooltip="Company" color="company" selected>{{tweet.company}}</mat-chip>
-          <mat-chip matTooltip="Sentiment {{tweet.sentiment | percent:'1.0-1'}}"
-            [color]="tweet.sentiment >= 0 ? 'bullish' : 'bearish'" selected>
-            {{tweet.sentiment >= 0 ? 'Bullish' : 'Bearish'}}</mat-chip>
-          <mat-chip matTooltip="Beginning of day price" color="darkish" selected>BOD | ${{tweet.bod}}</mat-chip>
-          <mat-chip matTooltip="End of day price" color="dark" selected>EOD | ${{tweet.eod}}</mat-chip>
-          <mat-chip matTooltip="Percentage change" [color]="tweet.difference >= 0 ? 'bullish' : 'bearish'">Change |
-            {{tweet.difference | percent:'1.2-2'}}</mat-chip>
-        </mat-chip-list>
-      </div>
-    </mat-card-actions>
-  </mat-card>
-</div> -->
