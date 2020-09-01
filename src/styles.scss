@@ -1,45 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/font-proxima-nova/style.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-html { background-color: #f4f4f4; }
-.mat-bullish {
-  color: #fff !important;
-  background-color: #4BB543 !important;
-}
-.mat-bullish[disabled] {
-  background-color: rgba(0, 0, 0, 0.12) !important;
-}
-.mat-bearish {
-  color: #fff !important;
-  background-color: #fc100d !important;
-}
-.mat-bearish[disabled] {
-  background-color: rgba(0, 0, 0, 0.12) !important;
+* {
+  font-family: "Proxima Nova Rg";
 }
 
-.mat-darkish {
-  color: #fff !important;
-  background-color: #798086 !important;
+html,
+body {
+  height: 100%;
 }
-
-.mat-company {
-  color: #fff !important;
-  background-color: #0A2463 !important;
-}
-
-.mat-next {
-  color: #fff !important;
-  background-color: #3E92CC !important;
-}
-
-.mat-dark {
-  color: #fff !important;
-  background-color: #39393A !important;
-}
-
-.mat-progress-spinner circle, .mat-spinner circle {
-  stroke: #39393A!important;
+body {
+  margin: 0;
 }
 
 .hvr-grow {
