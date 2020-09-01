@@ -1,26 +1,21 @@
-<div *ngIf="loading" class="spin-wrapper">
-  <mat-spinner diameter=75></mat-spinner>
-</div>
-<div *ngIf="!loading">
-  <mat-card class="tweet-card">
-    <mat-card-content>
-      <div class="embed-container">
-        <ngx-tweet tweetId="{{tweet.id}}"><h1>Loading...</h1></ngx-tweet>
-      </div>
-    </mat-card-content>
-    <mat-card-actions>
-      <div class="chip-container">
-        <mat-chip-list>
-          <mat-chip matTooltip="Company" color="company" selected>{{tweet.company}}</mat-chip>
-          <mat-chip matTooltip="Sentiment {{tweet.sentiment | percent:'1.0-1'}}"
-            [color]="tweet.sentiment >= 0 ? 'bullish' : 'bearish'" selected>
-            {{tweet.sentiment >= 0 ? 'Bullish' : 'Bearish'}}</mat-chip>
-          <mat-chip matTooltip="Beginning of day price" color="darkish" selected>BOD | ${{tweet.bod}}</mat-chip>
-          <mat-chip matTooltip="End of day price" color="dark" selected>EOD | ${{tweet.eod}}</mat-chip>
-          <mat-chip matTooltip="Percentage change" [color]="tweet.difference >= 0 ? 'bullish' : 'bearish'">Change |
-            {{tweet.difference | percent:'1.2-2'}}</mat-chip>
-        </mat-chip-list>
-      </div>
-    </mat-card-actions>
-  </mat-card>
+<div class="tweet-container">
+  <p-card>
+    <ngx-tweet tweetId="{{tweet.id}}">
+      <h1>Loading...</h1>
+    </ngx-tweet>
+    <div class="chip-container">
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-secondary" label="{{tweet.company}}" pTooltip="Company"
+        tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded" label="{{tweet.sentiment | percent:'1.0-1'}}"
+        pTooltip="{{tweet.sentiment >= 0 ? 'Bullish Sentiment' : 'Bearish Sentiment'}}" tooltipPosition="bottom"
+        class="{{tweet.sentiment >= 0 ? 'p-button-success' : 'p-button-danger'}}"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-info" label="BOD | ${{tweet.bod}}"
+        pTooltip="Beginning of Day" tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-info" label="EOD | ${{tweet.eod}}"
+        pTooltip="End of Day" tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded" label="{{tweet.difference | percent:'1.2-2'}}"
+        pTooltip="Percentage Difference" tooltipPosition="bottom"
+        class="{{tweet.difference >= 0 ? 'p-button-success' : 'p-button-danger'}}"></button>
+    </div>
+  </p-card>
 </div>
