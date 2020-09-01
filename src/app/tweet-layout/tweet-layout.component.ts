@@ -8,7 +8,8 @@ import { TweetService } from '../tweet.service';
 })
 export class TweetLayoutComponent implements OnInit {
   tweets;
-  idx = 1;
+  idx = 3;
+
   constructor(private service: TweetService) { }
   ngOnInit(): void {
     this.service.getTweets().subscribe(data => {
@@ -16,7 +17,7 @@ export class TweetLayoutComponent implements OnInit {
     });
   }
   loadMore() {
-    this.idx += 5;
+    this.idx += 3;
   }
 
 }
