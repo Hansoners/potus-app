@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { TweetLayoutComponent } from './tweet-layout/tweet-layout.component';
 import player from 'lottie-web/build/player/lottie_svg';
 import { ButtonModule } from 'primeng/button';
-
+import { CardModule } from 'primeng/card';
 
 import { NgxTweetModule } from 'ngx-tweet';
 import { TweetCardComponent } from './tweet-card/tweet-card.component';
 import { HomeComponent } from './home/home.component';
+import { TweetViewComponent } from './tweet-view/tweet-view.component';
 
+import { CarouselModule } from 'primeng/carousel';
 export function playerFactory() {
   return player;
 }
@@ -24,7 +26,8 @@ export function playerFactory() {
     AppComponent,
     TweetLayoutComponent,
     TweetCardComponent,
-    HomeComponent
+    HomeComponent,
+    TweetViewComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,9 @@ export function playerFactory() {
     HttpClientModule,
     NgxTweetModule,
     LottieModule.forRoot({ player: playerFactory, useCache: true }),
-    ButtonModule
+    ButtonModule,
+    CardModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
