@@ -3,5 +3,19 @@
     <ngx-tweet tweetId="{{tweet.id}}">
       <h1>Loading...</h1>
     </ngx-tweet>
+    <div class="chip-container">
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-secondary" label="{{tweet.company}}" pTooltip="Company"
+        tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded" label="{{tweet.sentiment | percent:'1.0-1'}}"
+        pTooltip="{{tweet.sentiment >= 0 ? 'Bullish Sentiment' : 'Bearish Sentiment'}}" tooltipPosition="bottom"
+        class="{{tweet.sentiment >= 0 ? 'p-button-success' : 'p-button-danger'}}"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-info" label="BOD | ${{tweet.bod}}"
+        pTooltip="Beginning of Day" tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded p-button-info" label="EOD | ${{tweet.eod}}"
+        pTooltip="End of Day" tooltipPosition="bottom"></button>
+      <button pButton type="button" class="p-button-sm p-button-rounded" label="{{tweet.difference | percent:'1.2-2'}}"
+        pTooltip="Percentage Difference" tooltipPosition="bottom"
+        class="{{tweet.difference >= 0 ? 'p-button-success' : 'p-button-danger'}}"></button>
+    </div>
   </p-card>
 </div>

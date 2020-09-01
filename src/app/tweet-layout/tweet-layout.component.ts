@@ -8,7 +8,7 @@ import { TweetService } from '../tweet.service';
 })
 export class TweetLayoutComponent implements OnInit {
   tweets;
-  idx = 3;
+  idx = 1;
 
   constructor(private service: TweetService) { }
   ngOnInit(): void {
