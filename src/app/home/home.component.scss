@@ -3,6 +3,12 @@ a:link {
   color: #343434;
 }
 
+.main-container {
+  background-image: url("/assets/shapes.png") !important;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .title-section {
   padding: 30px 0 50px;
   text-align: center;
@@ -39,7 +45,6 @@ a:link {
   color: grey;
   position: relative;
   top: -100px;
-  margin-bottom: 25px;
 }
 
 i {

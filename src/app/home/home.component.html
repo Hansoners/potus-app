@@ -1,17 +1,19 @@
-<div class="title-section animate__animated animate__fadeIn">
-    <div class="title">twitter sentiment analyser</div>
-    <div class="image animate__animated animate__fadeIn">
-      <ng-lottie [options]="options">
-      </ng-lottie>
+<div class="main-container">
+    <div class="title-section animate__animated animate__fadeIn">
+        <div class="title">twitter sentiment analyser</div>
+        <div class="image animate__animated animate__fadeIn">
+            <ng-lottie [options]="options">
+            </ng-lottie>
+        </div>
+        <div class="content-text">
+            Scrapes POTUS tweets for mentions of companies<br>and analyzes its sentiment to visualize its impact on the
+            market<br><a href="https://github.com/Hansoners/potus-app"><i class="fa fa-github"></i></a></div>
+
+
+        <div class="btn-wrapper">
+            <button pButton type="button" [routerLink]="['/start']" label="Start"
+                class="p-button-lg p-button-rounded"></button>
+        </div>
+        <div class="little-text">made with <i class="fa fa-heart heart"></i> by Hanson</div>
     </div>
-    <div class="content-text">
-      Scrapes POTUS tweets for mentions of companies<br>and analyzes its sentiment to visualize its impact on the
-      market<br><a href="https://github.com/Hansoners/potus-app"><i class="fa fa-github"></i></a></div>
-  
-  
-    <div class="btn-wrapper">
-      <button pButton type="button" [routerLink]="['/start']" label="Start"
-        class="p-button-lg p-button-rounded"></button>
-    </div>
-    <div class="little-text">made with <i class="fa fa-heart heart"></i> by Hanson</div>
-  </div>
+</div>
