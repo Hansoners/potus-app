@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+
+import { PrimeNGConfig } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
 
-  constructor(private titleService: Title) {
+  constructor(private primengConfig: PrimeNGConfig) { }
+
+  ngOnInit() {
+    this.primengConfig.ripple = true;
   }
 
-  ngOnInit(): void {
-  }
 }
