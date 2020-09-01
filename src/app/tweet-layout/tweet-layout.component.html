@@ -1,4 +1,11 @@
-<div class="main-container animate__animated animate__fadeIn">
+
+ <div class="image animate__animated animate__fadeIn" *ngIf="loading">
+   <p><i>Fetching tweets</i></p>
+  <ng-lottie class="pos" [options]="options">
+  </ng-lottie>
+</div>
+
+<div class="main-container animate__animated animate__fadeIn" *ngIf="!loading">
   <div class="tweet-container">
     <div class="p-justify-center">
       <div *ngFor="let tweet of tweets | slice:0:idx">
