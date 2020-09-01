@@ -1,10 +1,21 @@
-# PotusWebApp
+<h1>
+  POTUS Sentiment Analysis
+</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+Potus App is uses sentiment analysis by Google Cloud Natural Language API on tweets by the US president and visualizes its impact on the market. 
 
-## Python Script
+Click <a href="https://github.com/Hansoners/twitter-stock-bot">here</a> for the script.
 
-The script can be found [here](https://github.com/Hansoners/twitter-stock-bot).
+<p>
+  <img width="75%" 
+    src="https://raw.githubusercontent.com/Hansoners/potus-app/master/src/assets/start.png"
+  />
+</p>
+<p>
+  <img width="75%" 
+    src="https://raw.githubusercontent.com/Hansoners/potus-app/master/src/assets/tweets.png"
+  />
+</p>
 
 ## Development server
 
