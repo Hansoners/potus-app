@@ -8,14 +8,16 @@
 <div class="main-container animate__animated animate__fadeIn" *ngIf="!loading">
   <div class="tweet-container">
     <div class="p-justify-center">
-      <div *ngFor="let tweet of tweets | slice:0:idx">
-        <div class="card-container">
+      <div *ngFor="let tweet of tweets | slice:start:idx">
+        <div class="card-container" *ngIf="tweet">
           <app-tweet-card [tweet]=tweet></app-tweet-card>
         </div>
       </div>
     </div>
   </div>
   <div class="btn-container">
+    <button pButton type="button" (click)="loadLess()" icon="pi pi-minus"
+    class="p-button-text p-button-rounded"></button>
     <button pButton type="button" (click)="loadMore()" icon="pi pi-plus"
       class="p-button-text p-button-rounded"></button>
   </div>

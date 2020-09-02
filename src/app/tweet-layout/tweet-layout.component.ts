@@ -10,6 +10,7 @@ import { AnimationOptions } from 'ngx-lottie';
 export class TweetLayoutComponent implements OnInit {
   tweets;
   idx = 1;
+  start = 0;
   loading = true;
   options: AnimationOptions = {
     path: '/assets/loading.json'
@@ -23,7 +24,12 @@ export class TweetLayoutComponent implements OnInit {
     });
   }
   loadMore() {
-    this.idx += 3;
+    this.start = this.idx;
+    this.idx += 1;
+  }
+  loadLess() {
+    this.start =  Math.max(this.start - 1, 0);
+    this.idx = Math.max(this.idx - 1, 1);
   }
 
 }
